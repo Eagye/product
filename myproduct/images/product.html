@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="slider()">
+    <div class="banner">
+         <div class="slider">
+            <img src="k2.jpeg" alt="no image" id="slideImg">
+            <div class="overlay">
+                <div class="content">
+                    <h1>Kos Klodin</h1>
+                    <h3>Get The Best From Us</h3>
+                </div>
+            </div>
+            
+         </div>
+    </div>
+    <script>
+        var slideImg = document.getElementById("slideImg");
+        var Image = new Array(
+            "k2.jpeg",
+            "k3.jpeg",
+            "k4.jpeg",
+            "k5.jpeg",
+            "k17.jpg",
+            "k18.jpg",
+            "kos1.jpeg",
+            "k6.jpeg",
+            "k7.jpeg",
+            "k8.jpeg",
+            "k16.jpg",
+            "k21.jpg",
+            "k9.jpeg",
+            "k10.jpeg"
+        )
+        var len =Image.length;
+        var i =0;
+        function slider(){
+            if(i > len-1){
+                i = 0;
+            }
+            slideImg.src = Image[i];
+            i++;
+            setTimeout("slider()",4000);
+        }
+    </script>
+
+</body>
